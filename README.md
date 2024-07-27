@@ -21,8 +21,9 @@ docker-compose up --build
 hit http://localhost:3000 
 
 ### 4. Profit!!!.
+<br>
 
-Additonal Notes:
+## Additonal Notes:
 ### 1. Running without docker.
 The application is configured to run with nginx proxy, running frontend and backend seperately will not work.<br>
 You will have to change backend api urls to match with frontend for it to work without nginx.

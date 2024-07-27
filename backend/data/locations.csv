@@ -1,0 +1,31 @@
+location_id,company_id,name,address,latitude,longitude
+1,1,TechNova HQ,"123 Innovation Drive, San Francisco, CA 94105",37.7749,-122.4194
+2,1,TechNova R&D Center,"456 Research Park, Palo Alto, CA 94304",37.4419,-122.1430
+3,1,TechNova East Coast Office,"789 Tech Square, Cambridge, MA 02139",42.3623,-71.0890
+4,2,GreenLeaf HQ,"456 Sustainability Ave, Portland, OR 97201",45.5155,-122.6789
+5,2,GreenLeaf Solar Farm,"101 Sun Valley Road, Bend, OR 97701",44.0582,-121.3153
+6,2,GreenLeaf Wind Farm,"202 Breeze Way, Tillamook, OR 97141",45.4562,-123.8440
+7,3,OceanView Main Port,"789 Harbor Blvd, Miami, FL 33131",25.7617,-80.1918
+8,3,OceanView Gulf Center,"321 Bayou Street, New Orleans, LA 70130",29.9511,-90.0715
+9,3,OceanView Pacific Hub,"654 Pier Avenue, Long Beach, CA 90802",33.7701,-118.1937
+10,4,MountainPeak HQ,"101 Summit Road, Denver, CO 80202",39.7392,-104.9903
+11,4,MountainPeak Ski Resort,"202 Powder Lane, Aspen, CO 81611",39.1911,-106.8175
+12,4,MountainPeak Summer Retreat,"303 Alpine Way, Estes Park, CO 80517",40.3772,-105.5217
+13,5,UrbanEdge Flagship Store,"202 City Center Plaza, Chicago, IL 60601",41.8781,-87.6298
+14,5,UrbanEdge Outlet Mall,"404 Discount Drive, Aurora, IL 60502",41.7606,-88.3201
+15,5,UrbanEdge Pop-up Shop,"606 Trend Street, Wicker Park, Chicago, IL 60622",41.9088,-87.6796
+16,6,SunriseMed Research Center,"303 Health Lane, Boston, MA 02110",42.3601,-71.0589
+17,6,SunriseMed Production Facility,"505 Pharma Park, Worcester, MA 01605",42.2626,-71.8023
+18,6,SunriseMed Distribution Center,"707 Logistics Loop, Springfield, MA 01103",42.1015,-72.5898
+19,7,ElectraTech Main Campus,"404 Circuit Street, Austin, TX 78701",30.2672,-97.7431
+20,7,ElectraTech Innovation Lab,"808 Robotics Road, Dallas, TX 75201",32.7767,-96.7970
+21,7,ElectraTech Assembly Plant,"1212 Microchip Avenue, San Antonio, TX 78205",29.4241,-98.4936
+22,8,AgroFuture HQ,"505 Harvest Road, Des Moines, IA 50309",41.5868,-93.6250
+23,8,AgroFuture Research Farm,"1010 Crop Circle, Ames, IA 50011",42.0308,-93.6319
+24,8,AgroFuture Distribution Hub,"1515 Silo Street, Cedar Rapids, IA 52401",41.9779,-91.6656
+25,9,QuantumLeap AI Headquarters,"606 Algorithm Alley, Seattle, WA 98101",47.6062,-122.3321
+26,9,QuantumLeap Data Center,"1212 Server Street, Redmond, WA 98052",47.6740,-122.1215
+27,9,QuantumLeap AI Ethics Center,"1818 Conscience Court, Bellevue, WA 98004",47.6101,-122.2015
+28,10,EcoHarbor Waikiki Resort,"707 Beachfront Drive, Honolulu, HI 96815",21.3069,-157.8583
+29,10,EcoHarbor Maui Retreat,"2020 Paradise Place, Lahaina, HI 96761",20.8824,-156.6819
+30,10,EcoHarbor Big Island Adventure,"3030 Volcano View Road, Hilo, HI 96720",19.7241,-155.0868

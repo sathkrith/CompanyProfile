@@ -1,0 +1,22 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: DockerFile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+  
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: DockerFile
+      args:
+        - REACT_APP_API_BASE_URL=http://backend:8000
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend:/app
+    environment:
+      - REACT_APP_API_BASE_URL=http://backend:8000

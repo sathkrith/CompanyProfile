@@ -1,0 +1,11 @@
+company_id,name,address,latitude,longitude
+1,TechNova Solutions,"123 Innovation Drive, San Francisco, CA 94105",37.7749,-122.4194
+2,GreenLeaf Enterprises,"456 Sustainability Ave, Portland, OR 97201",45.5155,-122.6789
+3,OceanView Logistics,"789 Harbor Blvd, Miami, FL 33131",25.7617,-80.1918
+4,MountainPeak Investments,"101 Summit Road, Denver, CO 80202",39.7392,-104.9903
+5,UrbanEdge Retail,"202 City Center Plaza, Chicago, IL 60601",41.8781,-87.6298
+6,SunriseMed Innovations,"303 Health Lane, Boston, MA 02110",42.3601,-71.0589
+7,ElectraTech Industries,"404 Circuit Street, Austin, TX 78701",30.2672,-97.7431
+8,AgroFuture Corporation,"505 Harvest Road, Des Moines, IA 50309",41.5868,-93.6250
+9,QuantumLeap AI,"606 Algorithm Alley, Seattle, WA 98101",47.6062,-122.3321
+10,EcoHarbor Resorts,"707 Beachfront Drive, Honolulu, HI 96815",21.3069,-157.8583

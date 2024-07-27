@@ -24,7 +24,13 @@ const CompanyDetails: React.FC = () => {
   const [view, setView] = useState<ViewEnum>(ViewEnum.Map);
   const [filteredLocations, setFilteredLocations] = useState<CompanyLocation[]>([]);
   const [headQuarters, setHeadQuarters] = useState<CompanyLocation | null>(null);
-
+  /**
+   * Navigates back to the company list.
+   */
+  const history = useNavigate ();
+  const goBack = () => {
+    history('/'); 
+  };
   useEffect(() => {
       axios.get(`/api/companies/${id}`)
       .then(response => {
@@ -43,6 +49,7 @@ const CompanyDetails: React.FC = () => {
           .catch(error => {
             if (error.response && error.response.status === 404) {
               setError("Company locations not found");
+              history('/NotFound');
             } else {
               setError("An error occurred while fetching company location details");
             }
@@ -51,19 +58,14 @@ const CompanyDetails: React.FC = () => {
       .catch(error => {
         if (error.response && error.response.status === 404) {
           setError("Company not found");
+          history('/NotFound');
         } else {
           setError("An error occurred while fetching company details");
         }
       });
    }, [id]);
 
-  /**
-   * Navigates back to the company list.
-   */
-  const history = useNavigate ();
-  const goBack = () => {
-    history('/'); 
-  };
+
   
   // Handle the case where the company or locations are still loading
   if (error) return <div>{error}</div>;

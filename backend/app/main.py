@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-@app.get("/api/companies")
+@app.get("/companies")
 def get_companies():
     """
     Retrieve all companies.
@@ -34,7 +34,7 @@ def get_companies():
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
 
-@app.get("/api/companies/{company_id}")
+@app.get("/companies/{company_id}")
 def get_company_details(company_id: int):
     """
     Retrieve details of a specific company by its ID.
@@ -60,7 +60,7 @@ def get_company_details(company_id: int):
 
 
 
-@app.get("/api/companies/{company_id}/locations")
+@app.get("/companies/{company_id}/locations")
 def get_locations(company_id: int):
     """
     Retrieve all locations for a specific company by its ID.

@@ -5,6 +5,9 @@ interface ViewMode {
     setView: (view: ViewEnum) => void;
 }
 
+/**
+ * Represents the available view modes.
+ */
 export enum ViewEnum {
     Map = 'map',
     List = 'list',

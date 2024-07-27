@@ -4,6 +4,9 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { Company } from '../types';
 import CompanyCard from './CompanyCard';
 
+/**
+ * Renders a list of companies with search functionality.
+ */
 const CompanyList: React.FC = () => {
   const [companies, setCompanies] = useState<Company[]>([]);
   const [search, setSearch] = useState<string>('');
@@ -38,7 +41,7 @@ const CompanyList: React.FC = () => {
           onChange={handleSearchChange}
         />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="space-y-4">
         {filteredCompanies.length !== 0 && (
           filteredCompanies.map(company => (
           <CompanyCard

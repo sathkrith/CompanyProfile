@@ -27,11 +27,19 @@ code {
   width: 100%;
 }
 
-.card:hover{
+.listcard:hover{
   background-color: #748d92;
 }
 
 .backg{
   height: 100vh;
   width: 100vw;
+}
+
+.detailcard{
+  padding-bottom: 5px;
+}
+
+.listblock{
+  margin-bottom: 20px;
 }

@@ -22,12 +22,15 @@ export const greenIcon = new L.Icon({
     shadowSize: [41, 41]
   });
 
+/**
+ * Default icon for Leaflet map markers.
+ */
 export const defaultIcon = new L.Icon({
-  iconUrl: require('leaflet/dist/images/marker-icon.png'),
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
+    iconUrl: require('leaflet/dist/images/marker-icon.png'),
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
 
 const Map: React.FC<MapViewProps> = ({ setView, locations, headquarters, height, width }) => {

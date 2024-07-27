@@ -13,6 +13,7 @@ import InteractiveListView from './InteractiveListView';
 import TabbedView from './TabbedView';
 import { Company, CompanyLocation } from '../types';
 import { ViewEnum } from './ViewMode';
+import CompanyDetailCard from './CompanyDetailCard';
 
 const CompanyDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -74,43 +75,50 @@ const CompanyDetails: React.FC = () => {
 
   return (
     <div className="p-4 h-screen">
-    <h1 className="text-2xl font-bold">{company.name}</h1>
-    <p className="mb-4">{company.address}</p>
-    <button onClick={goBack} className="btn btn-primary mb-3">Back to List</button>
-    <h3>Locations</h3>
-    <div className="relative flex flex-col md:flex-row h-full w-full">
-      <div className="flex flex-col md:flex-row h-screen w-full">
-          {view === ViewEnum.Map && (
-            <div className="flex-1">
-            <Map
-              setView={setView}
-              headquarters={headQuarters}
-              locations={filteredLocations} 
-              height={'100%'} 
-              width={'100%'}        />
+      <h1 className="text-2xl font-bold">{company.name}</h1>
+      <p className="mb-4">{company.address}</p>
+      <button onClick={goBack} className="btn btn-primary mb-3">Back to List</button>
+      <div className="flex-1 listblock">
+        <h2 className="text-xl font-bold mb-2">Other Locations</h2>
+        <div className="space-y-4">
+          {filteredLocations.map(location => (
+            <CompanyDetailCard key={location.location_id} location={location} />
+          ))}
+        </div>
+      </div>
+      <div className="relative flex flex-col md:flex-row h-full w-full">
+        <div className="flex flex-col md:flex-row h-screen w-full">
+            {view === ViewEnum.Map && (
+              <div className="flex-1">
+              <Map
+                setView={setView}
+                headquarters={headQuarters}
+                locations={filteredLocations} 
+                height={'100%'} 
+                width={'100%'}        />
+                </div>
+            )}
+            {view === ViewEnum.List && (
+              <div className="flex flex-col md:flex-row h-full w-full">
+              <InteractiveListView
+                setView={setView}
+                headquarters={headQuarters}
+                locations={filteredLocations}
+                selectedLocation={selectedLocation}
+                onLocationClick={handleLocationClick}
+              />
               </div>
-          )}
-          {view === ViewEnum.List && (
-            <div className="flex flex-col md:flex-row h-full w-full">
-            <InteractiveListView
-              setView={setView}
-              headquarters={headQuarters}
-              locations={filteredLocations}
-              selectedLocation={selectedLocation}
-              onLocationClick={handleLocationClick}
-            />
-            </div>
-          )}
-          {view === ViewEnum.Tabbed && (
-            <div className="flex-1  h-screen">
-            <TabbedView
-              setView={setView}
-              headquarters={headQuarters}
-              locations={filteredLocations}
-            />
-            </div>
-          )}
-          </div>
+            )}
+            {view === ViewEnum.Tabbed && (
+              <div className="flex-1  h-screen">
+              <TabbedView
+                setView={setView}
+                headquarters={headQuarters}
+                locations={filteredLocations}
+              />
+              </div>
+            )}
+        </div>
       </div>
     </div>
   );
